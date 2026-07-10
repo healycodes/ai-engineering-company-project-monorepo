@@ -1,131 +1,143 @@
-# Welcome to TrackFlow
+# Welcome to Nexova Solutions
 
 ## AI Engineering · 4Geeks Academy — Company Briefing
 
 ---
 
-TrackFlow is a last-mile delivery and warehouse management company founded in 2009 in Los Angeles, United States. It operates in two markets — United States and Spain — with warehouses in Los Angeles and Zaragoza. The company employs approximately 130 people and generates around 9 million euros in annual revenue.
+Nexova Solutions is a human resources consulting and talent acquisition firm founded in 2011, headquartered in Valencia, Spain, with an expansion office in Miami, Florida. The company has 120 employees and generates approximately 8 million dollars in annual revenue across three business lines: executive and mid-management headhunting, customer support team outsourcing for technology companies, and corporate training in soft skills and leadership.
 
-TrackFlow exists because e-commerce brands are good at making and selling products, but not at getting those products to customers' doors. TrackFlow does that for them: it stores their inventory, picks and packs orders, ships them out through a network of carriers, and handles returns when things come back. For the brands that work with TrackFlow, the entire logistics operation — from the moment an order is placed to the moment it is delivered or returned — is TrackFlow's problem to solve.
+Nexova's clients are mid-sized companies — mostly in technology, retail, and financial services — that have decided to outsource some or all of their talent management. They come to Nexova because finding the right people, training them, and keeping them engaged is hard, and Nexova has spent twelve years building the expertise to do it well.
 
 ## How the company is organised
 
-TrackFlow is led by **Thomas Harry**, the founder and CEO, based in Los Angeles. The company has a technology office in Zaragoza, Spain, where CTO Andrés Kim and most of the tech team are based. Operations, commercial, and customer-facing teams are distributed between the two countries.
+Nexova is led by **Laura Mendoza**, CEO since the company's founding. She built the business from a two-person consultancy into a 120-person firm operating in two countries. She is direct, results-focused, and has a clear view of what Nexova needs to become — she just needs the right tools to get there.
 
 The company is organised around the following areas:
 
-**Warehouse Operations** is where the physical work of logistics happens. Ana Whitfield oversees the two warehouses — one in Los Angeles, one in Zaragoza — and the roughly 70 operatives who run them. Every day, hundreds of orders arrive, get picked from shelves, packed into boxes, and handed off to carriers. The two warehouses currently run on different systems and have no shared view of inventory.
+**Talent Selection Operations** is the core of what Nexova does and its main source of revenue. Javier Almeida manages a team of 40 selection consultants who run recruitment processes on behalf of clients — from the initial briefing through CV screening, interviews, and final placement. Every step of this process is currently done manually.
 
-**Last Mile and Carrier Management** handles the relationship with the 8 carriers TrackFlow works with across the two countries — among them UPS, FedEx, MRW, and SEUR. Carlos Vega coordinates which carrier gets which shipment, tracks deliveries, and manages the incidents that inevitably occur: lost parcels, failed deliveries, wrong addresses. Right now, most of this is done manually, carrier by carrier.
+**Corporate Training** designs and delivers training programmes for client companies. Elena Vargas leads a team of 12 that runs courses, workshops, and webinars on topics ranging from leadership to communication to team management. The catalogue exists, enrolments happen, but there is almost no infrastructure behind it — just a PDF, a Google Form, and a spreadsheet.
 
-**Reverse Logistics** manages what happens when a product comes back. Sofía Ramos leads this team of five. Returns represent between 18% and 25% of total volume depending on the client and country, and every return involves a chain of decisions — approve or reject, collect or not, recondition or dispose — that currently all pass through human review.
+**Customer Support Outsourcing** is where Nexova provides client companies with dedicated support teams. Roberto Díaz manages 30 agents who handle customer incidents on behalf of technology, retail, and finance clients, working by phone, email, and chat. The team is skilled, but they operate without a knowledge base, without real-time visibility, and with a resolution time that regularly misses the committed service level.
 
-**Customer Experience** is the frontline between TrackFlow and the people it serves. Valentina Cruz manages 15 agents in Los Angeles and Zaragoza who handle queries from both the brands (who want to know how their operations are performing) and the end consumers (who want to know where their parcel is). The vast majority of queries are repetitive, and right now every single one is answered by a human.
+**Sales and Business Development** drives the growth of the business. Megan Clarke leads a team of 18 people — account managers who look after existing clients and SDRs who pursue new ones. The team has a CRM but uses it inconsistently, does most prospecting manually, and loses deals they should not lose simply because follow-up falls through the cracks.
 
-**Commercial and Client Relations** manages TrackFlow's portfolio of brand clients. Miguel Torres leads account managers and business development people who are responsible for retaining existing clients and winning new ones. Client contracts run annually, and renewals are won or lost based on whether clients feel their logistics operation is running well.
+**Marketing and Communications** manages Nexova's external presence: the corporate website, LinkedIn, the monthly newsletter, and the blog. Carmen Ruiz leads a small team that produces everything manually and has limited visibility into what actually works.
 
-**Technology** is the team building and maintaining everything. Andrés Kim leads a team of developers, data engineers, and systems people from Zaragoza. The current architecture is a patchwork: two different warehouse systems, an ERP from the early 2010s, and integrations between them that were built quickly and never properly documented. When something breaks, the team finds out through a WhatsApp message from someone in operations.
+**Human Resources** handles everything related to Nexova's own 120 employees: contracts, onboarding, holidays, performance reviews, and day-to-day queries. Patricia Solís manages this with a team of four, largely by email and spreadsheet.
 
-**Executive Leadership** sits with Thomas, who manages the business from Los Angeles with a weekly consolidated report that each director prepares manually — a process that consumes hours every Sunday evening and still delivers data that is already a day or two old.
+**Technology and Infrastructure** is led by CTO Sergio Molina, who has a team of six. The current technology estate is a collection of tools that were each introduced to solve a specific problem and have never been properly connected: a legacy helpdesk, a CRM, a home-built applicant tracking system from the early 2010s, and Google Workspace as the connective tissue between everything. There is no telemetry, no centralised logging, and no clear picture of what is happening across the business at any given moment.
+
+**Executive Leadership** centres on Laura, who receives a weekly PDF report prepared manually by each department head — a process that takes hours of their time every week and still delivers information that is several days old by the time it reaches her.
 
 ## Where the company stands today
 
-TrackFlow has good clients, a skilled operations team, and a clear value proposition. What it lacks is the infrastructure to run a two-country logistics business at scale. The two warehouses cannot see each other's inventory. Carrier performance data does not exist in any structured form. Returns are approved or rejected one by one. Customer queries are answered by agents consulting a Word document on Google Drive. The CEO makes decisions based on a report assembled by hand.
+Nexova has a strong reputation in its markets, a deep network of candidates and clients built over twelve years, and a team that genuinely knows how to find, develop, and support talent. What it does not have is the infrastructure to operate at scale.
 
-The consequence is that TrackFlow is slower, more error-prone, and less profitable than it needs to be — and the gap is growing as competitors invest in automation.
+The consequences are tangible: consultants spend most of their time on manual tasks that could be automated, clients have no visibility into the status of their recruitment processes, the training catalogue is invisible to most potential buyers, the support team misses its SLAs, and leadership makes decisions based on data that is always a week behind.
 
-Daniel has created an internal unit called **TrackFlow Tech** with a clear mandate: build the systems, integrations, and intelligent automations that allow TrackFlow to operate as the modern logistics company it needs to become.
+New platforms — automated, data-driven, and built for scale — are starting to compete directly with what Nexova offers. Laura knows that the window to respond is not unlimited.
 
-**You are part of that unit.**
+She has assembled an AI Engineering team to build the systems, automations, and intelligent tools that will allow Nexova to do what it already does well — but faster, at greater scale, and with far less manual effort.
 
----
+**You are part of that team.**
 
 ---
 
 ## The Departments and Their Problems
 
-### 🚚 Warehouse Operations
+### 🌐 Marketing and Communications
 
-**Manager:** Ana Whitfield (~70 operatives + 2 warehouse managers)
+**Manager:** Carmen Ruiz
 
-Los Angeles and Zaragoza each use a different warehouse management system — one is commercial software, the other is an advanced spreadsheet. Real-time inventory visibility doesn't exist at a global level. Inbound orders arrive by email in different formats and are manually transcribed. Picking is done with printed paper lists. Inventory discrepancies are frequent and detected late.
+The corporate website was built in 2019 and hasn't been meaningfully updated — it's slow, not accessible, and doesn't reflect the company's current positioning. Content is produced manually, and the team doesn't measure the real impact of their work: they know how many website visits they get, but not what converts.
 
-**What they need:** A unified inventory API returning real-time stock for any SKU in either warehouse, an order ingestion pipeline that parses emails automatically, a warehouse operations dashboard, and low-stock alerts that notify clients and the procurement team.
-
----
-
-### 📦 Last Mile and Carrier Management
-
-**Manager:** Carlos Vega (6 logistics coordinators)
-
-TrackFlow works with 8 carriers across both countries (UPS, FedEx, DHL in the United States; MRW, SEUR, DHL in Spain, plus two local carriers). Carrier assignment is manual. Package tracking requires checking multiple carrier portals individually. There is no historical performance data: no on-time delivery rate, no incidents per route, no cost per kg.
-
-**What they need:** A carrier selection engine that recommends the optimal carrier given destination, weight, and urgency; a unified tracking endpoint aggregating status from any carrier; a public tracking portal for recipients; and a carrier performance dashboard.
+**What they need:** A full redesign of the corporate website with SEO/GEO optimisation and schema.org markup, an AI-assisted content pipeline, and a marketing metrics dashboard tracking visits, traffic sources, and conversion rates.
 
 ---
 
-### 🔄 Reverse Logistics
+### 💼 Sales and Business Development
 
-**Manager:** Sofía Ramos (5-person team)
+**Manager:** Marcos Ibáñez (18-person team: 6 account managers, 12 SDRs)
 
-Returns represent 18–25% of volume depending on client and country. Every return goes through manual review — there are no automatic approval criteria. Product inspection after return is subjective and inconsistent. There is no visibility into which products are returned most and why.
+SDRs prospect manually on LinkedIn, export lists to Excel, and follow up by email with no automation. They have a CRM (HubSpot) but only 40% of the team updates it consistently. Many deals are lost due to lack of follow-up, and there is no visibility into which prospects are most likely to close.
 
-**What they need:** An automatic returns approval engine with configurable per-client rules, an automated collection flow (approval → label → carrier schedule), an AI-assisted inspection system where the operative photographs the product and AI classifies its condition, and a returns dashboard with pattern analysis.
-
----
-
-### 📞 Customer Experience
-
-**Manager:** Valentina Cruz (15 agents in Los Angeles and Zaragoza)
-
-TrackFlow serves two customer types: brands (B2B) and end consumers (B2C). The 15 agents handle both through email, WhatsApp, and phone with no unified ticketing system. 80% of queries could be answered automatically. There is no knowledge base. Coverage outside office hours is zero.
-
-**What they need:** A first-line CX agent resolving tracking queries and return status automatically, a semantic knowledge base indexed for RAG, a unified ticketing system, a real-time CX dashboard, and sentiment analysis to detect frustrated customers before escalation. Multilingual support (Spanish + English) is optional but highly recommended, starting from one base language.
+**What they need:** A sales pipeline dashboard, a prospecting sequence automation (first contact → follow-up → close or discard), deal alerts for inactive conversations, and an AI agent that suggests personalised proposal angles based on a prospect's profile.
 
 ---
 
-### 🤝 Commercial and Client Relations
+### 🧑‍🤝‍🧑 Human Resources (Internal)
 
-**Manager:** Miguel Torres (4 account managers + 4 business development)
+**Manager:** Patricia Solís
 
-Account managers track their accounts in personal spreadsheets and email threads — there is no CRM. Client reporting is manual: each month an account manager compiles data from different systems to send each client a PDF. There is no visibility into which clients are at risk of not renewing.
+Holiday requests, absences, and HR queries are managed by email and spreadsheets. New employee onboarding is manual. Performance reviews happen twice a year through Google Forms that nobody reviews systematically. There are no visibility metrics: no turnover rate, no absenteeism data, no average time-to-fill for internal roles.
 
-**What they need:** A CRM integration with unified client profiles, automated client PDF reports generated by an agent, a client health dashboard with renewal risk scores, 90 and 30-day renewal alerts, and a commercial agent that suggests relevant services to prospects.
+**What they need:** An internal HR portal, an automated onboarding flow with progressive checklists, an HR KPI dashboard, and an internal HR agent that answers team questions about policies and benefits.
 
 ---
 
-### 💻 Technology
+### 🔍 Talent Selection Operations (core business)
 
-**CTO:** Andrés Kim (7-person team in Zaragoza)
+**Manager:** Javier Almeida (40 selection consultants)
 
-TrackFlow's tech architecture is the result of years of unplanned growth: two different WMS systems, a legacy ERP from the early 2010s, undocumented point-to-point Python scripts, and databases in two different cloud providers. There is no centralised telemetry. When an endpoint fails in Los Angeles, the Zaragoza team finds out via WhatsApp. Deployment of a new feature takes one to two weeks.
+CV screening is manual: each consultant reads 30 to 80 CVs per search. Candidate communication is done by individual email with no templates. There is no system to track the real-time status of each candidate — clients call to ask. Matching between candidate and vacancy relies entirely on consultant intuition.
 
-**What they need:** Centralised telemetry and logging from both countries, a data pipeline feeding all company dashboards, real-time monitoring with automatic alerts, a technical documentation agent, and automated ops tasks (backups, health checks, incident notifications).
+**What they need:** An AI-assisted selection pipeline with automatic CV scoring and ranking, a RAG system over the candidate database ("find profiles with B2B sales experience and C1 English"), a candidate portal with real-time status, and a communication agent that sends automatic status emails.
+
+---
+
+### 🎓 Corporate Training
+
+**Manager:** Elena Vargas (12-person team)
+
+The training catalogue lives in a PDF updated quarterly. Enrolments are handled through a Google Form managed manually in a spreadsheet. There is no record of who completed which training beyond Excel attendance lists. Personalisation is zero: every client receives the same catalogue proposal regardless of their needs.
+
+**What they need:** A searchable training catalogue with online enrolment, a recommendation system that suggests programmes based on client profile, a learner portal with progress tracking, and a training advisory chatbot that builds personalised training plans.
+
+---
+
+### 📞 Customer Support (outsourced service)
+
+**Manager:** Roberto Díaz (30 agents)
+
+The 30 agents handle incidents from Nexova's outsourcing clients (tech, retail, finance) by phone, email, and web chat. There is no centralised knowledge base — agents resolve issues from experience and a shared Word document on Drive. Average resolution time is 48 hours; the committed SLA is 24 hours. Supervisors have no real-time visibility into workload or backlog state.
+
+**What they need:** A first-line support chatbot that resolves 40% of queries without human intervention using RAG, a centralised knowledge base with semantic search, a real-time support dashboard, and a ticket sentiment analysis tool that identifies dissatisfied clients before they escalate.
+
+---
+
+### 💻 Technology and Infrastructure
+
+**CTO:** Sergio Molina (6-person team)
+
+The technology stack is a patchwork of disconnected tools: HubSpot, legacy Zendesk, Google Workspace, a home-built ATS from the 2010s, and multiple spreadsheets. There is no telemetry or centralised logging. When something fails, the team finds out through users. Deployments are manual.
+
+**What they need:** Centralised telemetry and logging, a data pipeline that feeds all company dashboards, real-time monitoring with automatic alerts, and an internal engineering agent that answers architecture questions by querying technical documentation.
 
 ---
 
 ### 📊 Executive Direction
 
-**CEO:** Daniel Espinoza
+**CEO:** Laura Mendoza
 
-Daniel receives a consolidated report every Monday that his directors prepare on Sunday evening — 3 to 4 hours of work per director. By 10am Monday, some data is already two days old. There is no unified view of the business by country. Strategic decisions are made with partial data.
+Laura receives a weekly PDF report prepared manually by each department head — preparation takes 4 to 8 hours per manager. There is no unified view of the business. Strategic decisions are made with data that is a week old.
 
-**What he needs:** A global executive dashboard with real-time KPIs from both operations (shipment volume, on-time delivery, costs, returns, CSAT), an automatically generated weekly report at 7am Monday, country comparison views, threshold alerts, and a natural-language AI assistant.
-
---
-
-## Why Choose TrackFlow?
-
-Choose TrackFlow if you are drawn to:
-
-- **Logistics and physical operations** — every line of code you write is connected to a parcel moving from a warehouse shelf to someone's front door.
-- **Cross-border complexity** — two countries, two languages, two regulatory environments, and two separate tech stacks that need to be unified.
-- **Data engineering at its most concrete** — carrier performance metrics, SKU-level inventory, shipment event streams, and returns classification are all structured, measurable, and visually compelling in dashboards.
-- **Systems that run 24/7** — TrackFlow's customers don't stop expecting their parcels after 6pm. The CX agent, tracking portal, and operations dashboard all need to be always-on.
-
-The AI challenges at TrackFlow include image-based product condition classification for returns, semantic search over logistics policies in two languages, intelligent carrier selection with explainable recommendations, and a real-time parcel tracking aggregator pulling data from 8 different carrier APIs. If you want to build systems that handle physical-world complexity at scale, TrackFlow is your company.
+**What she needs:** A unified executive dashboard with real-time KPIs from all areas, an automatically generated weekly report, strategic threshold alerts, and a natural-language AI assistant she can query directly.
 
 ---
+
+## Why Choose Nexova?
+
+Choose Nexova if you are drawn to:
+
+- **People and data** — building systems that rank candidates, track learners, and measure sales team performance.
+- **B2B services** — your users are not anonymous consumers but professional teams with specific workflows and expectations.
+- **AI at the core of the business** — at Nexova, AI doesn't support the product; it _is_ the competitive advantage. CV scoring, candidate matching, RAG over a knowledge base, and first-line support agents are central deliverables, not optional enhancements.
+- **Cross-functional complexity** — you will build for five very different teams (operations, sales, HR, training, support), each with different data, different users, and different definitions of success.
+
+The AI challenges at Nexova include semantic search over a candidate database, first-line support automation that must respect SLAs, a CV scoring pipeline with explainable rankings, and a recommendation engine for training programmes. If you want your portfolio to demonstrate AI Engineering applied directly to a company's core operations — not just its internal tools — Nexova is your company.
+
+--
 
 _Internal document — 4Geeks Academy · AI Engineering Track_
 _For exclusive use in programme project generation_
