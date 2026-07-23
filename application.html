@@ -1,0 +1,143 @@
+\<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Nexova Solutions</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-sky-400 flex items-center justify-center font-heading font-extrabold text-xl text-white shadow-lg">
+                        N
+                    </div>
+                    <span class="text-2xl font-heading font-extrabold tracking-tight text-white">Nexova<span class="text-blue-400">Solutions</span></span>
+                </a>
+                <a href="index.html" class="text-sm font-medium text-slate-400 hover:text-white transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left text-xs"></i> Back to Homepage
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- FORM CONTAINER -->
+    <main class="pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+        <div class="text-center mb-10">
+            <span class="text-blue-400 font-semibold text-xs uppercase tracking-widest">Get In Touch</span>
+            <h1 class="text-3xl sm:text-4xl font-heading font-bold text-white mt-2">Contact Us</h1>
+            <p class="text-slate-400 text-sm mt-3 font-light">Fill out your inquiry details below and a principal consultant will reach out within 24 hours.</p>
+        </div>
+
+        <!-- Submission Alert Banner -->
+        <div id="success-alert" class="hidden mb-8 p-6 bg-emerald-950/60 border border-emerald-500/40 rounded-2xl text-emerald-300 text-sm flex items-center gap-4">
+            <i class="fa-solid fa-circle-check text-2xl text-emerald-400"></i>
+            <div>
+                <h4 class="font-bold text-white">Message Sent!</h4>
+                <p class="text-xs text-emerald-300 mt-1">Thank you for reaching out. Our team will review your message and reply via email shortly.</p>
+            </div>
+        </div>
+
+        <form id="application-form" class="bg-slate-900/60 border border-slate-800/80 rounded-3xl p-8 sm:p-10 space-y-6 shadow-2xl">
+            <!-- Full Name -->
+            <div>
+                <label for="fullName" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. Sarah Connor" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors">
+                <p id="fullName-error" class="text-rose-400 text-xs mt-1.5 hidden"></p>
+            </div>
+
+            <!-- Business Email -->
+            <div>
+                <label for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Business Email *</label>
+                <input type="email" id="email" name="email" placeholder="sarah@company.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors">
+                <p id="email-error" class="text-rose-400 text-xs mt-1.5 hidden"></p>
+            </div>
+
+            <!-- Company Name -->
+            <div>
+                <label for="company" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Company Name *</label>
+                <input type="text" id="company" name="company" placeholder="e.g. Acme Innovations" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors">
+                <p id="company-error" class="text-rose-400 text-xs mt-1.5 hidden"></p>
+            </div>
+
+            <!-- Industry Sector -->
+            <div>
+                <label for="industry" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Industry Sector *</label>
+                <select id="industry" name="industry" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-blue-500 transition-colors">
+                    <option value="">Select an industry...</option>
+                    <option value="tech">Technology / SaaS</option>
+                    <option value="retail">Retail & E-Commerce</option>
+                    <option value="finance">Financial Services</option>
+                    <option value="other">Other</option>
+                </select>
+                <p id="industry-error" class="text-rose-400 text-xs mt-1.5 hidden"></p>
+            </div>
+
+            <!-- Service Line -->
+            <div>
+                <label for="service" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Service Interest *</label>
+                <select id="service" name="service" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-blue-500 transition-colors">
+                    <option value="">Select service interested in...</option>
+                    <option value="talent">Talent Selection (Headhunting)</option>
+                    <option value="support">Customer Support Outsourcing</option>
+                    <option value="training">Corporate Leadership Training</option>
+                    <option value="general">General Contact / Inquiry</option>
+                </select>
+                <p id="service-error" class="text-rose-400 text-xs mt-1.5 hidden"></p>
+            </div>
+
+            <!-- Additional Details -->
+            <div>
+                <label for="notes" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Message / Inquiry Details (Optional)</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="How can we assist your business?" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"></textarea>
+            </div>
+
+            <!-- Terms Checkbox -->
+            <div class="pt-2">
+                <label class="flex items-start gap-3 cursor-pointer">
+                    <input type="checkbox" id="terms" name="terms" class="mt-1 w-4 h-4 rounded bg-slate-950 border-slate-800 text-blue-600 focus:ring-blue-500">
+                    <span class="text-xs text-slate-400 font-light">I agree to the privacy policy and consent to Nexova Solutions contacting me regarding this message. *</span>
+                </label>
+                <p id="terms-error" class="text-rose-400 text-xs mt-1.5 hidden"></p>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full py-4 rounded-xl font-heading font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 shadow-xl shadow-blue-500/25 transition-all text-sm">
+                Send Message
+            </button>
+        </form>
+    </main>
+
+    <!-- Validation Script -->
+    <script src="validation.js"></script>
+</body>
+</html>

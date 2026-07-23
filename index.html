@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexova Solutions | Talent Acquisition & HR Consulting</title>
+    <meta name="description" content="Nexova Solutions connects mid-sized tech, retail, and finance companies with top-tier talent, outsourced support teams, and executive training.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EmploymentAgency",
+      "name": "Nexova Solutions",
+      "url": "https://nexovasolutions.com",
+      "logo": "https://nexovasolutions.com/logo.png",
+      "description": "Executive search, customer support outsourcing, and corporate leadership training for mid-sized technology, retail, and financial services companies.",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Valencia",
+          "addressCountry": "Spain"
+        },
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Miami",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Left Side: Hamburger Menu First, then Logo -->
+                <div class="flex items-center gap-4">
+                    <!-- Hamburger Button (Far Left) -->
+                    <button id="menu-toggle" class="flex flex-col justify-center items-center w-11 h-11 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 focus:outline-none transition-all" aria-label="Toggle Menu">
+                        <span class="w-6 h-0.5 bg-current transition-all duration-300 mb-1.5" id="line1"></span>
+                        <span class="w-6 h-0.5 bg-current transition-all duration-300 mb-1.5" id="line2"></span>
+                        <span class="w-6 h-0.5 bg-current transition-all duration-300" id="line3"></span>
+                    </button>
+
+                    <!-- Brand Logo -->
+                    <a href="index.html" class="flex items-center gap-3" aria-label="Nexova Solutions Homepage">
+                        <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-sky-400 flex items-center justify-center font-heading font-extrabold text-xl text-white shadow-lg shadow-blue-500/30">
+                            N
+                        </div>
+                        <span class="text-2xl font-heading font-extrabold tracking-tight text-white">Nexova<span class="text-blue-400">Solutions</span></span>
+                    </a>
+                </div>
+
+                <!-- Right Side Navigation Links (Desktop) -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#services" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">Business Lines</a>
+                    <a href="#testimonials" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">Testimonials</a>
+                    <a href="#blog" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">Insights</a>
+                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">About</a>
+                    <a href="application.html" class="text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors">Contact Us</a>
+                </nav>
+
+            </div>
+        </div>
+
+        <!-- Dropdown / Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden bg-slate-950/95 border-b border-slate-800/80 px-6 pt-4 pb-6 space-y-3 backdrop-blur-2xl">
+            <a href="#services" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-blue-400 transition-colors">Business Lines</a>
+            <a href="#testimonials" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-blue-400 transition-colors">Testimonials</a>
+            <a href="#blog" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-blue-400 transition-colors">Insights</a>
+            <a href="#about" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-blue-400 transition-colors">About</a>
+            <a href="application.html" class="mobile-link block px-4 py-3 rounded-xl text-base font-heading font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg shadow-blue-500/25 mt-2 text-center">
+                Contact Us
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- HERO SECTION -->
+        <section class="relative overflow-hidden py-24 lg:py-32">
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-60 -left-40 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-8">
+                    <i class="fa-solid fa-sparkles"></i> Valencia &bull; Miami &bull; Founded 2011
+                </span>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.15]">
+                    Transforming Talent with <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-300 to-sky-400">Modern Intelligence</span>
+                </h1>
+                <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed font-light">
+                    Over 12 years empowering mid-sized tech, retail, and financial services firms with executive headhunting, dedicated support teams, and leadership development.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="application.html" class="w-full sm:w-auto px-8 py-4 rounded-xl font-heading text-base font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-xl shadow-blue-600/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                        Contact Us <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-xl font-heading text-base font-bold text-slate-300 bg-slate-900 hover:bg-slate-800 border border-slate-800 transition-all flex items-center justify-center">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="py-24 bg-slate-900/40 border-t border-b border-slate-800/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-heading font-bold text-white tracking-tight sm:text-4xl">Our Business Solutions</h2>
+                    <p class="mt-4 text-slate-400 font-light">Click any business line to explore detailed technical capabilities.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div onclick="openServiceModal('talent')" class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800/80 hover:border-blue-500/50 transition-all duration-300 group cursor-pointer hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-lg">
+                            <i class="fa-solid fa-user-check text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-white mb-3">Talent Selection</h3>
+                        <p class="text-slate-400 leading-relaxed font-light text-sm mb-4">40 expert recruitment consultants running end-to-end headhunting for executive and mid-management roles.</p>
+                        <span class="text-xs font-semibold text-blue-400 flex items-center gap-1 group-hover:underline">
+                            Learn Details & Requirements <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </span>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div onclick="openServiceModal('support')" class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800/80 hover:border-blue-500/50 transition-all duration-300 group cursor-pointer hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-lg">
+                            <i class="fa-solid fa-headset text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-white mb-3">Support Outsourcing</h3>
+                        <p class="text-slate-400 leading-relaxed font-light text-sm mb-4">30 dedicated agents handling phone, email, and chat incidents for tech, retail, and finance partners.</p>
+                        <span class="text-xs font-semibold text-indigo-400 flex items-center gap-1 group-hover:underline">
+                            Learn Details & Requirements <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </span>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div onclick="openServiceModal('training')" class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800/80 hover:border-blue-500/50 transition-all duration-300 group cursor-pointer hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-2xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-6 group-hover:bg-sky-600 group-hover:text-white transition-all shadow-lg">
+                            <i class="fa-solid fa-chalkboard-user text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-white mb-3">Corporate Training</h3>
+                        <p class="text-slate-400 leading-relaxed font-light text-sm mb-4">Tailored workshops and webinars covering soft skills, communication, and executive leadership development.</p>
+                        <span class="text-xs font-semibold text-sky-400 flex items-center gap-1 group-hover:underline">
+                            Learn Details & Requirements <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section id="testimonials" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-blue-400 font-semibold text-xs uppercase tracking-widest">Client Success</span>
+                    <h2 class="text-3xl font-heading font-bold text-white tracking-tight sm:text-4xl mt-2">Trusted by Industry Leaders</h2>
+                    <p class="mt-4 text-slate-400 font-light">See how Nexova Solutions transforms hiring and support operations.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-3xl bg-slate-900/50 border border-slate-800/80 flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-amber-400 gap-1 mb-4 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed italic font-light">
+                                "Nexova’s talent selection team placed three principal engineers in under four weeks. Their screening process saved us over 80 hours of internal interviews."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-8 pt-6 border-t border-slate-800/60">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Elena Rostova" class="w-12 h-12 rounded-full object-cover ring-2 ring-blue-500/30">
+                            <div>
+                                <h4 class="text-white font-heading font-semibold text-sm">Elena Rostova</h4>
+                                <p class="text-slate-400 text-xs">VP of Engineering, FinTech Global</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-8 rounded-3xl bg-slate-900/50 border border-slate-800/80 flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-amber-400 gap-1 mb-4 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed italic font-light">
+                                "Outsourcing our tier-1 support to Roberto's team at Nexova helped us meet our 24-hour SLA targets consistently. Outstanding professionalism!"
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-8 pt-6 border-t border-slate-800/60">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Marcus Vance" class="w-12 h-12 rounded-full object-cover ring-2 ring-blue-500/30">
+                            <div>
+                                <h4 class="text-white font-heading font-semibold text-sm">Marcus Vance</h4>
+                                <p class="text-slate-400 text-xs">Head of Customer Operations, RetailFlow</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-8 rounded-3xl bg-slate-900/50 border border-slate-800/80 flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-amber-400 gap-1 mb-4 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed italic font-light">
+                                "The executive leadership workshops delivered by Elena Vargas completely revitalized our manager communication and reduced team turnover."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 mt-8 pt-6 border-t border-slate-800/60">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Sarah Lin" class="w-12 h-12 rounded-full object-cover ring-2 ring-blue-500/30">
+                            <div>
+                                <h4 class="text-white font-heading font-semibold text-sm">Sarah Lin</h4>
+                                <p class="text-slate-400 text-xs">Chief People Officer, CloudScale</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG / INSIGHTS SECTION -->
+        <section id="blog" class="py-24 bg-slate-900/40 border-t border-b border-slate-800/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                    <div>
+                        <span class="text-blue-400 font-semibold text-xs uppercase tracking-widest">Thought Leadership</span>
+                        <h2 class="text-3xl font-heading font-bold text-white tracking-tight sm:text-4xl mt-2">Latest HR & Talent Insights</h2>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="bg-slate-900/60 border border-slate-800/80 rounded-3xl overflow-hidden hover:border-blue-500/40 transition-all duration-300 group">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Executive Search" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-blue-400">Headhunting & HR</span>
+                            <h3 class="text-lg font-heading font-bold text-white mt-2 mb-3 group-hover:text-blue-400 transition-colors">How AI Screening Accelerates Executive Search without Losing Human Touch</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed font-light mb-4">Discover how intelligent candidate parsing helps consultants discover top 1% talent faster.</p>
+                            <span class="text-xs text-slate-500">July 18, 2026 &bull; 5 min read</span>
+                        </div>
+                    </article>
+
+                    <article class="bg-slate-900/60 border border-slate-800/80 rounded-3xl overflow-hidden hover:border-blue-500/40 transition-all duration-300 group">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Outsourced Support" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-indigo-400">Customer Support</span>
+                            <h3 class="text-lg font-heading font-bold text-white mt-2 mb-3 group-hover:text-blue-400 transition-colors">Meeting Strict SLA Targets: Building High-Performance Support Teams</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed font-light mb-4">Key frameworks for maintaining sub-24h resolution times across tech and retail channels.</p>
+                            <span class="text-xs text-slate-500">July 10, 2026 &bull; 4 min read</span>
+                        </div>
+                    </article>
+
+                    <article class="bg-slate-900/60 border border-slate-800/80 rounded-3xl overflow-hidden hover:border-blue-500/40 transition-all duration-300 group">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="Corporate Training" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-sky-400">Leadership</span>
+                            <h3 class="text-lg font-heading font-bold text-white mt-2 mb-3 group-hover:text-blue-400 transition-colors">Why Soft Skills Are the Missing Link in Tech Management Leadership</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed font-light mb-4">Empowering senior software engineers and team leads with communication tools that work.</p>
+                            <span class="text-xs text-slate-500">June 29, 2026 &bull; 6 min read</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-blue-400 font-semibold text-xs uppercase tracking-widest">Leadership & Vision</span>
+                        <h2 class="text-3xl font-heading font-bold text-white mt-2 mb-6">Founded by Laura Mendoza</h2>
+                        <p class="text-slate-300 mb-4 leading-relaxed font-light text-sm">
+                            Established in 2011 in Valencia, Spain, Nexova Solutions has transformed from a boutique consultancy into a 120-person regional leader with expansion offices in Miami, Florida.
+                        </p>
+                        <p class="text-slate-400 leading-relaxed font-light text-sm">
+                            Finding, training, and retaining talent is complex. We eliminate operational friction for mid-sized businesses so they can focus on what they do best.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-6 bg-slate-900/60 border border-slate-800/80 rounded-3xl text-center">
+                            <span class="text-4xl font-heading font-extrabold text-blue-400">120</span>
+                            <p class="text-xs text-slate-400 mt-2 font-light">Team Members</p>
+                        </div>
+                        <div class="p-6 bg-slate-900/60 border border-slate-800/80 rounded-3xl text-center">
+                            <span class="text-4xl font-heading font-extrabold text-indigo-400">$8M</span>
+                            <p class="text-xs text-slate-400 mt-2 font-light">Annual Revenue</p>
+                        </div>
+                        <div class="p-6 bg-slate-900/60 border border-slate-800/80 rounded-3xl text-center">
+                            <span class="text-4xl font-heading font-extrabold text-sky-400">12+</span>
+                            <p class="text-xs text-slate-400 mt-2 font-light">Years Experience</p>
+                        </div>
+                        <div class="p-6 bg-slate-900/60 border border-slate-800/80 rounded-3xl text-center">
+                            <span class="text-4xl font-heading font-extrabold text-blue-400">2</span>
+                            <p class="text-xs text-slate-400 mt-2 font-light">Hubs (Spain & USA)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INLINE BOTTOM CONTACT SECTION (Replaced Floating Bar) -->
+        <section class="py-20 bg-gradient-to-b from-slate-900/50 to-slate-950 border-t border-slate-800/80">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+                <div class="p-8 sm:p-12 rounded-3xl bg-slate-900/80 border border-slate-800 shadow-2xl relative overflow-hidden">
+                    <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Consultants Available Now
+                    </span>
+                    <h2 class="text-3xl font-heading font-bold text-white">Ready to Elevate Your Team?</h2>
+                    <p class="mt-4 text-slate-400 text-sm font-light max-w-xl mx-auto">Get in touch with our team in Valencia or Miami to discuss talent selection, outsourcing, or leadership training.</p>
+                    <div class="mt-8">
+                        <a href="application.html" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-heading text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-xl shadow-blue-600/30 transition-all">
+                            Contact Us <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-slate-500 text-xs">
+                &copy; 2026 Nexova Solutions S.L. All rights reserved. | Valencia &bull; Miami
+            </div>
+            <div class="flex space-x-6 text-slate-400">
+                <a href="#" class="hover:text-blue-400 transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                <a href="#" class="hover:text-blue-400 transition-colors" aria-label="Twitter"><i class="fa-brands fa-twitter text-lg"></i></a>
+                <a href="#" class="hover:text-blue-400 transition-colors" aria-label="GitHub"><i class="fa-brands fa-github text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SERVICE DETAIL MODAL DRAWER -->
+    <div id="service-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 max-w-lg w-full relative shadow-2xl">
+            <button onclick="closeServiceModal()" class="absolute top-6 right-6 text-slate-400 hover:text-white text-xl focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modal-content"></div>
+            <div class="mt-8 pt-6 border-t border-slate-800 flex gap-4">
+                <a href="application.html" class="flex-1 text-center py-3 rounded-xl font-heading text-sm font-bold text-white bg-blue-600 hover:bg-blue-500 transition-all">
+                    Contact Us About This Service
+                </a>
+                <button onclick="closeServiceModal()" class="px-5 py-3 rounded-xl text-sm font-semibold text-slate-400 hover:text-white bg-slate-800 transition-all">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT LOGIC -->
+    <script>
+        // Hamburger Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuToggle.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                line1.classList.add('rotate-45', 'translate-y-2');
+                line2.classList.add('opacity-0');
+                line3.classList.add('-rotate-45', '-translate-y-2');
+            } else {
+                closeMobileMenu();
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+            line1.classList.remove('rotate-45', 'translate-y-2');
+            line2.classList.remove('opacity-0');
+            line3.classList.remove('-rotate-45', '-translate-y-2');
+        }
+
+        // Service Modal Logic
+        const modalData = {
+            talent: {
+                title: "Talent Selection Operations",
+                badge: "Headhunting & Recruitment",
+                desc: "Our team of 40 specialized recruiters connects tech, retail, and financial services companies with executive leadership and core technical professionals.",
+                points: ["4-week average placement timeframe", "98% candidate retention rate over 12 months", "Full technical & culture-fit screening"]
+            },
+            support: {
+                title: "Customer Support Outsourcing",
+                badge: "Operations & Helpdesk",
+                desc: "A dedicated team of 30 bilingual support agents delivering 24/7 coverage across email, chat, and phone channels.",
+                points: ["Strict sub-24h incident resolution SLAs", "Bilingual capabilities (English & Spanish)", "Custom CRM integration & onboarding"]
+            },
+            training: {
+                title: "Corporate Leadership Training",
+                badge: "Executive Development",
+                desc: "Tailored workshops, executive coaching, and seminars designed to elevate team communication and engineering management skills.",
+                points: ["Customized management curriculum", "Interactive remote & on-site workshops", "Post-training feedback & KPI tracking"]
+            }
+        };
+
+        function openServiceModal(type) {
+            const data = modalData[type];
+            if (!data) return;
+
+            const contentHtml = `
+                <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">${data.badge}</span>
+                <h3 class="text-2xl font-heading font-bold text-white mt-2 mb-4">${data.title}</h3>
+                <p class="text-slate-300 text-sm leading-relaxed mb-6 font-light">${data.desc}</p>
+                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Key Highlights:</h4>
+                <ul class="space-y-2 text-xs text-slate-300">
+                    ${data.points.map(pt => `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> ${pt}</li>`).join('')}
+                </ul>
+            `;
+
+            document.getElementById('modal-content').innerHTML = contentHtml;
+            document.getElementById('service-modal').classList.remove('hidden');
+        }
+
+        function closeServiceModal() {
+            document.getElementById('service-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
