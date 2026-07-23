@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -64,37 +64,37 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 
-                <!-- Left Side: Hamburger Menu First, then Logo -->
-                <div class="flex items-center gap-4">
-                    <!-- Hamburger Button (Far Left) -->
-                    <button id="menu-toggle" class="flex flex-col justify-center items-center w-11 h-11 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 focus:outline-none transition-all" aria-label="Toggle Menu">
-                        <span class="w-6 h-0.5 bg-current transition-all duration-300 mb-1.5" id="line1"></span>
-                        <span class="w-6 h-0.5 bg-current transition-all duration-300 mb-1.5" id="line2"></span>
-                        <span class="w-6 h-0.5 bg-current transition-all duration-300" id="line3"></span>
-                    </button>
+                <!-- FAR LEFT: Hamburger Menu Button -->
+                <button id="menu-toggle" class="flex flex-col justify-center items-center w-11 h-11 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 focus:outline-none transition-all" aria-label="Toggle Menu">
+                    <span class="w-6 h-0.5 bg-current transition-all duration-300 mb-1.5" id="line1"></span>
+                    <span class="w-6 h-0.5 bg-current transition-all duration-300 mb-1.5" id="line2"></span>
+                    <span class="w-6 h-0.5 bg-current transition-all duration-300" id="line3"></span>
+                </button>
 
-                    <!-- Brand Logo -->
-                    <a href="index.html" class="flex items-center gap-3" aria-label="Nexova Solutions Homepage">
-                        <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-sky-400 flex items-center justify-center font-heading font-extrabold text-xl text-white shadow-lg shadow-blue-500/30">
-                            N
+                <!-- FAR RIGHT: Premium Nexova Solutions Logo -->
+                <a href="index.html" class="group flex items-center gap-3.5" aria-label="Nexova Solutions Homepage">
+                    <div class="text-right">
+                        <span class="block text-xl font-heading font-extrabold tracking-tight text-white group-hover:text-blue-400 transition-colors">
+                            Nexova<span class="text-blue-500">.</span>
+                        </span>
+                        <span class="block text-[10px] uppercase font-bold tracking-[0.25em] text-slate-400 -mt-1 group-hover:text-slate-300 transition-colors">
+                            Solutions
+                        </span>
+                    </div>
+
+                    <div class="relative flex items-center justify-center">
+                        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-sky-400 opacity-70 blur-md group-hover:opacity-100 transition duration-500"></div>
+                        <div class="relative h-11 w-11 rounded-2xl bg-slate-950 ring-1 ring-white/20 flex items-center justify-center shadow-2xl overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 via-indigo-600/20 to-transparent"></div>
+                            <i class="fa-solid fa-layer-group text-lg text-transparent bg-clip-text bg-gradient-to-tr from-blue-400 to-sky-300 relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
                         </div>
-                        <span class="text-2xl font-heading font-extrabold tracking-tight text-white">Nexova<span class="text-blue-400">Solutions</span></span>
-                    </a>
-                </div>
-
-                <!-- Right Side Navigation Links (Desktop) -->
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="#services" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">Business Lines</a>
-                    <a href="#testimonials" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">Testimonials</a>
-                    <a href="#blog" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">Insights</a>
-                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-blue-400 transition-colors">About</a>
-                    <a href="application.html" class="text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors">Contact Us</a>
-                </nav>
+                    </div>
+                </a>
 
             </div>
         </div>
 
-        <!-- Dropdown / Mobile Navigation Menu -->
+        <!-- Dropdown Navigation Menu -->
         <div id="mobile-menu" class="hidden bg-slate-950/95 border-b border-slate-800/80 px-6 pt-4 pb-6 space-y-3 backdrop-blur-2xl">
             <a href="#services" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-blue-400 transition-colors">Business Lines</a>
             <a href="#testimonials" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-300 hover:bg-slate-900 hover:text-blue-400 transition-colors">Testimonials</a>
@@ -329,7 +329,7 @@
             </div>
         </section>
 
-        <!-- INLINE BOTTOM CONTACT SECTION (Replaced Floating Bar) -->
+        <!-- INLINE BOTTOM CONTACT SECTION -->
         <section class="py-20 bg-gradient-to-b from-slate-900/50 to-slate-950 border-t border-slate-800/80">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
                 <div class="p-8 sm:p-12 rounded-3xl bg-slate-900/80 border border-slate-800 shadow-2xl relative overflow-hidden">
@@ -383,7 +383,6 @@
 
     <!-- SCRIPT LOGIC -->
     <script>
-        // Hamburger Menu Toggle
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         const line1 = document.getElementById('line1');
@@ -391,21 +390,38 @@
         const line3 = document.getElementById('line3');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        menuToggle.addEventListener('click', () => {
+        // Toggle menu open/close
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevents instant closing on button click
             const isHidden = mobileMenu.classList.contains('hidden');
             if (isHidden) {
-                mobileMenu.classList.remove('hidden');
-                line1.classList.add('rotate-45', 'translate-y-2');
-                line2.classList.add('opacity-0');
-                line3.classList.add('-rotate-45', '-translate-y-2');
+                openMobileMenu();
             } else {
                 closeMobileMenu();
             }
         });
 
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
+        // Close menu when clicking link
+        mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
+        // Click outside menu to close
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                closeMobileMenu();
+            }
         });
+
+        // Press Escape key to close
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMobileMenu();
+        });
+
+        function openMobileMenu() {
+            mobileMenu.classList.remove('hidden');
+            line1.classList.add('rotate-45', 'translate-y-2');
+            line2.classList.add('opacity-0');
+            line3.classList.add('-rotate-45', '-translate-y-2');
+        }
 
         function closeMobileMenu() {
             mobileMenu.classList.add('hidden');
