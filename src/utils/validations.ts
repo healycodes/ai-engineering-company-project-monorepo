@@ -1,0 +1,2 @@
+import type { Candidate } from "../types/models.js";
+export function validateCandidate(candidate: Candidate): { isValid: boolean; errors: string[] } { const errors: string[] = []; if (!candidate.name || candidate.name.trim() === "") { errors.push("Candidate name is required."); } if (!candidate.email || !candidate.email.includes("@")) { errors.push("A valid email address is required."); } if (candidate.experienceYears < 0 || candidate.experienceYears > 50) { errors.push("Experience years must be between 0 and 50."); } return { isValid: errors.length === 0, errors }; }
