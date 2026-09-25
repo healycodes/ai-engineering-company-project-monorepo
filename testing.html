@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nexova candidate data utility testing workspace" />
+    <title>Talent Lab | Nexova Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#17201d",
+              paper: "#f5f4ee",
+              pine: "#14624a",
+              coral: "#e66a4e",
+              mist: "#dfe9e4"
+            },
+            fontFamily: {
+              sans: ["DM Sans", "sans-serif"],
+              display: ["Space Grotesk", "sans-serif"]
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      body { background-color: #f5f4ee; background-image: radial-gradient(#b9cbc2 0.7px, transparent 0.7px); background-size: 18px 18px; }
+      select { appearance: none; }
+      .reveal { animation: reveal 420ms ease-out both; }
+      @keyframes reveal { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+  </head>
+  <body class="min-h-screen font-sans text-ink antialiased">
+    <header class="border-b border-ink/10 bg-paper/90 backdrop-blur-md">
+      <div class="mx-auto flex min-h-16 max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href="index.html" class="flex items-center gap-3" aria-label="Nexova homepage">
+          <span class="grid h-9 w-9 place-items-center bg-pine text-sm font-bold text-white">N</span>
+          <span class="font-display text-lg font-bold">Nexova<span class="text-coral">.</span></span>
+        </a>
+        <div class="flex items-center gap-3 text-sm">
+          <span class="hidden items-center gap-2 text-ink/60 sm:flex"><span class="h-2 w-2 rounded-full bg-emerald-500"></span>Local dataset</span>
+          <a href="index.html" class="grid h-9 w-9 place-items-center border border-ink/15 bg-white hover:border-pine hover:text-pine" title="Back to website" aria-label="Back to website">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-[1440px] px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
+      <section class="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+        <div>
+          <p class="mb-2 font-display text-xs font-semibold uppercase text-pine">Talent Operations / Utility Console</p>
+          <h1 class="max-w-3xl font-display text-4xl font-bold leading-tight sm:text-5xl">Candidate data, under a microscope.</h1>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="border-l-2 border-coral pl-4">
+            <p class="text-xs text-ink/55">Records in view</p>
+            <p id="result-count" class="font-display text-2xl font-bold">0</p>
+          </div>
+          <button id="reset-button" type="button" class="flex h-10 items-center gap-2 border border-ink/15 bg-white px-4 text-sm font-semibold hover:border-ink/40" title="Reset workspace">
+            <i class="fa-solid fa-rotate-left"></i><span>Reset</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="mb-6 border border-ink/10 bg-white p-4 shadow-[4px_4px_0_#17201d] sm:p-5">
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div>
+            <label for="seniority-filter" class="mb-2 block text-xs font-semibold uppercase text-ink/55">Seniority</label>
+            <div class="relative">
+              <select id="seniority-filter" class="h-11 w-full border border-ink/15 bg-paper px-3 pr-9 text-sm outline-none focus:border-pine">
+                <option value="All">All levels</option>
+                <option value="Junior">Junior</option>
+                <option value="Semi-Senior">Semi-Senior</option>
+                <option value="Senior">Senior</option>
+                <option value="Lead">Lead</option>
+                <option value="Executive">Executive</option>
+              </select>
+              <i class="fa-solid fa-chevron-down pointer-events-none absolute right-3 top-4 text-xs text-ink/40"></i>
+            </div>
+          </div>
+
+          <div>
+            <label for="sort-select" class="mb-2 block text-xs font-semibold uppercase text-ink/55">Sort candidates</label>
+            <div class="relative">
+              <select id="sort-select" class="h-11 w-full border border-ink/15 bg-paper px-3 pr-9 text-sm outline-none focus:border-pine">
+                <option value="id">ID, ascending</option>
+                <option value="experience-asc">Experience, ascending</option>
+                <option value="experience-desc">Experience, descending</option>
+                <option value="salary-asc">Expected salary, ascending</option>
+                <option value="score-desc">Match score, highest first</option>
+                <option value="name">Name, A–Z</option>
+              </select>
+              <i class="fa-solid fa-arrow-down-wide-short pointer-events-none absolute right-3 top-4 text-xs text-ink/40"></i>
+            </div>
+          </div>
+
+          <div>
+            <label for="search-id" class="mb-2 block text-xs font-semibold uppercase text-ink/55">ID / expected salary</label>
+            <div class="flex">
+              <input id="search-id" type="search" placeholder="C-2024-0451" class="h-11 min-w-0 flex-1 border border-r-0 border-ink/15 bg-paper px-3 text-sm uppercase outline-none placeholder:normal-case focus:border-pine" />
+              <button id="search-button" type="button" class="grid h-11 w-11 shrink-0 place-items-center bg-pine text-white hover:bg-[#0f4d3a]" title="Search candidate" aria-label="Search candidate">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label for="search-method" class="mb-2 block text-xs font-semibold uppercase text-ink/55">Search method</label>
+            <div class="flex h-11 border border-ink/15 bg-paper p-1" id="search-method" role="group" aria-label="Search method">
+              <button type="button" data-method="linear" class="search-method flex-1 bg-ink px-3 text-xs font-semibold text-white">Linear</button>
+              <button type="button" data-method="binary" class="search-method flex-1 px-3 text-xs font-semibold text-ink/60">Binary</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="grid gap-6 xl:grid-cols-[minmax(0,1fr)_340px]">
+        <section class="min-w-0 overflow-hidden border border-ink/10 bg-white">
+          <div class="flex items-center justify-between border-b border-ink/10 px-5 py-4">
+            <h2 class="font-display text-lg font-bold">Candidate registry</h2>
+            <span id="active-operation" class="bg-mist px-3 py-1 text-xs font-semibold text-pine">Ready</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[720px] text-left text-sm">
+              <thead class="bg-ink text-xs uppercase text-white/70">
+                <tr>
+                  <th class="px-5 py-3 font-semibold">Candidate</th>
+                  <th class="px-5 py-3 font-semibold">Seniority</th>
+                  <th class="px-5 py-3 font-semibold">Experience</th>
+                  <th class="px-5 py-3 font-semibold">Status</th>
+                  <th class="px-5 py-3 text-right font-semibold">Match score</th>
+                </tr>
+              </thead>
+              <tbody id="candidate-table-body" class="divide-y divide-ink/10"></tbody>
+            </table>
+          </div>
+          <div id="empty-state" class="hidden px-6 py-16 text-center">
+            <i class="fa-regular fa-folder-open mb-3 text-3xl text-ink/25"></i>
+            <p class="font-display font-semibold">No matching candidates</p>
+          </div>
+        </section>
+
+        <aside class="space-y-6">
+          <section class="border border-ink/10 bg-ink p-5 text-white">
+            <div class="mb-5 flex items-center justify-between">
+              <h2 class="font-display text-lg font-bold">Report</h2>
+              <button id="report-button" type="button" class="grid h-9 w-9 place-items-center bg-coral text-white hover:bg-[#c9553d]" title="Generate report" aria-label="Generate report">
+                <i class="fa-solid fa-chart-column"></i>
+              </button>
+            </div>
+            <div id="report-content" class="grid grid-cols-2 gap-px bg-white/10">
+              <div class="bg-ink p-3"><p class="text-xs text-white/50">Average score</p><p id="average-score" class="mt-1 font-display text-2xl font-bold">—</p></div>
+              <div class="bg-ink p-3"><p class="text-xs text-white/50">Avg. expected salary</p><p id="average-experience" class="mt-1 font-display text-2xl font-bold">—</p></div>
+              <div class="bg-ink p-3"><p class="text-xs text-white/50">Highest score</p><p id="highest-score" class="mt-1 font-display text-2xl font-bold text-[#75d6b5]">—</p></div>
+              <div class="bg-ink p-3"><p class="text-xs text-white/50">Hired</p><p id="hired-count" class="mt-1 font-display text-2xl font-bold text-[#ff967e]">—</p></div>
+            </div>
+            <div id="seniority-report" class="mt-5 space-y-3"></div>
+          </section>
+
+          <section id="operation-result" class="border border-ink/10 bg-white p-5" aria-live="polite">
+            <div class="mb-3 flex items-center gap-2">
+              <i class="fa-solid fa-terminal text-coral"></i>
+              <h2 class="font-display font-bold">Operation result</h2>
+            </div>
+            <p id="result-message" class="text-sm leading-6 text-ink/60">Choose an operation to inspect its result.</p>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <script type="module" src="/src/testing.ts"></script>
+  </body>
+</html>

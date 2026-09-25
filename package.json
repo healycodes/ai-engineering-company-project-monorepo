@@ -1,6 +1,17 @@
 {
+  "name": "nexova-domain-models",
+  "version": "1.0.0",
+  "private": true,
   "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "test": "playwright test",
+    "typecheck": "tsc --noEmit"
+  },
   "devDependencies": {
-    "typescript": "^7.0.2"
+    "@playwright/test": "^1.55.0",
+    "typescript": "^7.0.2",
+    "vite": "^7.1.7"
   }
 }
