@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test";
-import { sampleCandidates, sampleVacancy, type Candidate, type SelectionProcess } from "../src/types/models.js";
+import { sampleCandidates, sampleVacancy } from "../src/sampleData.js";
+import type { Candidate, SelectionProcess } from "../src/types/models.js";
 import {
   filterCandidatesByAvailability,
   filterCandidatesBySeniority,

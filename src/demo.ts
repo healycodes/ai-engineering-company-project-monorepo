@@ -1,4 +1,4 @@
-import { sampleCandidates, sampleVacancy } from "./types/models.js";
+import { sampleCandidates, sampleVacancy } from "./sampleData.js";
 import { filterCandidatesBySkills, sortCandidatesBySalary } from "./utils/collections.js";
 import { binarySearchCandidateBySalary, findCandidateByEmail, findCandidateById } from "./utils/search.js";
 import {

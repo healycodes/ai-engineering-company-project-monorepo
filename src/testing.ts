@@ -1,4 +1,5 @@
-import { sampleCandidates, sampleVacancy, type Candidate, type SeniorityLevel } from "./types/models.js";
+import { sampleCandidates, sampleVacancy } from "./sampleData.js";
+import type { Candidate, SeniorityLevel } from "./types/models.js";
 import { filterCandidatesBySeniority, sortByField, sortCandidatesByExperience, sortCandidatesBySalary } from "./utils/collections.js";
 import { binarySearchCandidateBySalary, findCandidateById } from "./utils/search.js";
 import { calculateAverageSalary, calculateCandidateScore, countCandidatesByStatus, groupCandidatesBySeniority, rankCandidatesForVacancy } from "./utils/transformations.js";
